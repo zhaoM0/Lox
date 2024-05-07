@@ -29,7 +29,6 @@ script:
 	$(JAVAC) $(JAVAC_FLAGS) tool/GenerateAst.java
 	$(JAVA) -cp $(BIN_DIR) tool.GenerateAst $(SRC_DIR)
 
-
 # 将Java源文件编译为class文件
 $(BIN_DIR)/%.class: $(SRC_DIR)/%.java
 	@if [ ! -f $@ ] || [ $< -nt $@ ]; then \
